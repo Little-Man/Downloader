@@ -1,0 +1,18 @@
+package com.rs.multdownload;
+
+import java.io.IOException;
+import java.net.URL;
+
+public class MyDownload {
+
+	public static void main(String[] args) throws IOException{
+		
+		URL url = new URL("http://dldir1.qq.com/qqfile/qq/QQ7.3/15056/QQ7.3.exe");
+		
+		String parent = "d:/";
+		
+		MultThreadDownload md = new MultThreadDownload(url, parent);
+		
+		md.start();
+	}
+}
